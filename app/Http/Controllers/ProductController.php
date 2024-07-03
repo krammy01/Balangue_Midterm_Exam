@@ -7,17 +7,16 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function show() {
-        $products = [
-                'AGN' => 'https://cdn.myanimelist.net/images/anime/12/39497.jpg',
-                'AGD' => 'Boku No Pico',
-                'AGP' => 'Rating: 1/10',
-                'AMN' => 'https://qph.cf2.quoracdn.net/main-qimg-5a4c947674b62192740823431b2cc41a-lq',
-                'AMD' => 'Morphosis',
-                'AMP' => 'Rating 10/10',
-                'GCN' => 'https://upload.wikimedia.org/wikipedia/en/5/5a/Boku_no_Hero_Academia_Volume_1.png',
-                'GCD' => 'Boku No Hero Academia',
-                'GCP' => 'Rating: 10/10',
-        ];
-        return view('/shoes', $products);
+        return view('anime', [
+            'image' => 'https://th.bing.com/th/id/OIP.4raLYeb_cJnniVIqwRV5fQHaKc?rs=1&pid=ImgDetMain',
+            'title' => 'Moshuko Tensie',
+            'rating' => 'My Rating: 9/10',
+            'image1' => 'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974725984/kaiju-no-8-vol-1-9781974725984_xlg.jpg',
+            'title1' => 'kaiju No 8',
+            'rating1' => 'My Rating 8/10',
+            'image2' => 'https://animenewsandfacts.com/wp-content/uploads/2021/07/Spirit-Chronicles-Episode-Release-Schedule-696x984.jpg',
+            'title2' => 'Spirit Chronicles',
+            'rating2' => 'Rating: 8/10',
+        ]);
     }
 }
